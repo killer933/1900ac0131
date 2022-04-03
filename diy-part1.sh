@@ -12,6 +12,7 @@
 rm -rf package/helloworld
 git clone --depth=1 https://github.com/fw876/helloworld.git package/helloworld
 git -C package/helloworld pull
+sed -i '$a src-git helloworld https://github.com/fw876/helloworld'  feeds.conf.default
 
 # Uncomment a feed source
 #sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
